@@ -1,15 +1,70 @@
-/* Placeholder identity — deliberately different accent from scrollyviz-example
-   so the two are never visually confused. Replace all of this once the
-   polling-sim design is actually scoped. */
+/* Identity: plain data-viz sans throughout (per the dataviz skill's figure
+   guidance), deliberately distinct from scrollyviz-example's editorial serif.
+   Surfaces/ink are the dataviz skill's validated default chart chrome —
+   party colors below were contrast-checked against exactly these surface
+   hexes, so don't retone --surface without re-running the validator. */
 :root {
-  --paper: #fbfbf9;
-  --ink: #16202a;
-  --muted: #5a6b78;
-  --hair: #e4e7ea;
-  --accent: #4b3f96; /* placeholder violet, distinct from scrollyviz-example's teal */
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-secondary: #52514e;
+  --ink-muted: #898781;
+  --hairline: #e1e0d9;
+  --accent: #2a78d6;
 
-  --font-body: system-ui, sans-serif;
+  --party-labour: #e34948;
+  --party-conservative: #2a78d6;
+  --party-libdem: #eb6834;
+  --party-reform: #1baf7a;
+  --party-snp: #eda100;
+  --party-green: #008300;
+  --party-plaid: #4a3aa7;
+  --party-other: #e87ba4;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
   --measure: 34rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #ffffff;
+    --ink-secondary: #c3c2b7;
+    --ink-muted: #898781;
+    --hairline: #2c2c2a;
+    --accent: #3987e5;
+
+    --party-labour: #e66767;
+    --party-conservative: #3987e5;
+    --party-libdem: #d95926;
+    --party-reform: #199e70;
+    --party-snp: #c98500;
+    --party-green: #008300;
+    --party-plaid: #9085e9;
+    --party-other: #d55181;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --ink: #ffffff;
+  --ink-secondary: #c3c2b7;
+  --ink-muted: #898781;
+  --hairline: #2c2c2a;
+  --accent: #3987e5;
+
+  --party-labour: #e66767;
+  --party-conservative: #3987e5;
+  --party-libdem: #d95926;
+  --party-reform: #199e70;
+  --party-snp: #c98500;
+  --party-green: #008300;
+  --party-plaid: #9085e9;
+  --party-other: #d55181;
 }
 
 * {
@@ -18,11 +73,12 @@
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--page);
   color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 .intro,
@@ -33,50 +89,263 @@ body {
 }
 
 .intro {
-  min-height: 78vh;
+  /* Tall on purpose: the title sits near the top, then the reader scrolls
+     through a deliberate stretch of nothing before the sticky chart even
+     enters view — a beat to sit with the headline before the data starts. */
+  min-height: 100vh;
+  padding-top: 12vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .eyebrow {
   font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
   margin: 0 0 1rem;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 5.5vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   margin: 0 0 1.25rem;
+  font-weight: 700;
 }
 
 .standfirst {
-  font-size: 1.25rem;
-  color: var(--muted);
-  max-width: 28rem;
+  font-size: 1.2rem;
+  color: var(--ink-secondary);
+  max-width: 30rem;
   margin: 0;
 }
 
-.outro {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-  color: var(--muted);
-  font-size: 0.8rem;
+.steps .step {
+  /* Longer than the shared 92vh default: dots still finish entering by
+     ENTRY_END_FRAC (0.7) of this scroll distance, but a bigger distance
+     means that trailing 30% is now a genuinely long, noticeable pause
+     instead of a quick blip — see graphic.js's applyProgress(). Needs the
+     extra `.steps` ancestor: main.js loads this file BEFORE
+     scrolly-core/scrollytelling.css, so a bare `.step` here has equal
+     specificity to the shared rule and loses on source order. */
+  min-height: 180vh;
 }
 
-.placeholder-label {
-  fill: var(--muted);
-  font-family: monospace;
-  font-size: 0.9rem;
+/* Scroll-linked text motion — edit this to change how the step text moves.
+   scroller.js sets --step-progress to a live 0→1 value as the reader
+   scrolls through the step (independent of `offset` above, and not just
+   on/off like the shared .is-active fade this overrides). RAMP_END is
+   where the reader stands when this rule should be fully "arrived" —
+   currently a quarter of the way in, so the text settles early and holds,
+   same spirit as the dots' own pause. Try swapping the translateY distance,
+   the opacity floor, or RAMP_END itself. */
+.steps .step > * {
+  --ramp: min(1, var(--step-progress, 0) / 0.25); /* 0.25 = RAMP_END */
+  opacity: max(0.35, var(--ramp));
+  transform: translateY(calc((1 - var(--ramp)) * 16px));
+  /* No transition: --step-progress already updates every scroll frame, so
+     this tracks the scroll position directly — a CSS transition here would
+     make it visibly lag a beat behind, chasing a value that's already
+     moved on. */
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steps .step > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Same min-width: auto trap as .dotchart-scroll, one level further up:
+   .graphic is a grid item (in .scrolly's 1fr 1fr) whose implicit min-width
+   is its content's intrinsic width — with a wide bar inside, that pulled
+   the whole grid track wider than its 1fr share instead of letting
+   .dotchart-scroll's own overflow handle it. */
+.graphic {
+  min-width: 0;
+}
+
+.outro {
+  /* Scrollama needs somewhere for the last step to scroll away TO — without
+     enough trailing room, its scroll progress can't reach 1 and the dots
+     furthest into a bar never fully arrive. min-height buys that room; the
+     flex centering (matching .intro) makes it read as a deliberate closing
+     beat rather than leftover space. */
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--ink-muted);
+  font-size: 0.85rem;
 }
 
 .error {
-  color: var(--muted);
+  color: var(--ink-muted);
   padding: 2rem;
   text-align: center;
+}
+
+/* ---- Party swatch: shared by SVG dots and the HTML legend ---------------- */
+.dot-labour { fill: var(--party-labour); background: var(--party-labour); }
+.dot-conservative { fill: var(--party-conservative); background: var(--party-conservative); }
+.dot-libdem { fill: var(--party-libdem); background: var(--party-libdem); }
+.dot-reform { fill: var(--party-reform); background: var(--party-reform); }
+.dot-snp { fill: var(--party-snp); background: var(--party-snp); }
+.dot-green { fill: var(--party-green); background: var(--party-green); }
+.dot-plaid { fill: var(--party-plaid); background: var(--party-plaid); }
+.dot-other { fill: var(--party-other); background: var(--party-other); }
+
+/* ---- The dot chart --------------------------------------------------------
+   Single child of the shared sticky `.graphic` figure; fills it and owns its
+   own internal layout so it never has to fight the shared sticky/centering
+   rules in scrolly-core/scrollytelling.css. */
+.graphic .dotchart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem 0.5rem;
+  /* Nothing here — chart, legend, table — shows until the reader scrolls to
+     the step; graphic.js flips this class on the first renderScene(). */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.graphic .dotchart.is-revealed {
+  opacity: 1;
+}
+
+.dot {
+  stroke: var(--surface);
+  stroke-width: 1;
+}
+
+.dot:hover,
+.dot:focus-visible {
+  stroke: var(--ink);
+}
+
+/* Bars grow rightward and aren't clamped to the visible width (a real vote
+   count isn't compressed to fit) — this wrapper is the escape hatch: it
+   scrolls horizontally instead of clipping or squeezing a long bar. */
+.dotchart-scroll {
+  flex: 1;
+  min-height: 0;
+  /* Flex items default to min-width: auto, which lets a wide child (the
+     SVG, once a bar needs more room than is visible) force this container
+     to grow instead of scrolling it — the classic "flexbox won't let my
+     overflow: auto work" trap. min-width: 0 overrides that. */
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: var(--surface);
+  border-radius: 6px;
+}
+
+/* .graphic svg { width:100%; height:82vh } in the shared scrollytelling.css
+   has the same specificity as a bare `.dotchart svg` and loads AFTER this
+   file, so it was winning and squashing our sized-to-content SVG into an
+   82vh box — letterboxing the real (larger) viewBox and showing as blank
+   space. The extra `.graphic` ancestor here matches specificity AND wins
+   regardless of source order. */
+.graphic .dotchart svg {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.row-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  fill: var(--ink);
+}
+.row-value {
+  font-size: 0.68rem;
+  fill: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+.row-label-group:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- Legend: always present for 8 series --------------------------------- */
+.legend {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.78rem;
+  color: var(--ink-secondary);
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.legend-swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+  flex: none;
+}
+
+/* ---- Hover tooltip --------------------------------------------------------
+   Values lead (strong, primary ink); the demographic detail is secondary. */
+.dot-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  background: var(--ink);
+  color: var(--page);
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  max-width: 14rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.dot-tooltip strong {
+  font-size: 0.85rem;
+}
+.dot-tooltip span {
+  color: var(--page);
+  opacity: 0.8;
+}
+
+/* ---- Table view: the accessibility relief channel ------------------------ */
+.data-table {
+  flex: none;
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+}
+.data-table summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+}
+.data-table table {
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 0.35rem 0.6rem 0.35rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.data-table td.num,
+.data-table th:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 :focus-visible {

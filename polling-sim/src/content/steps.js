@@ -1,12 +1,6 @@
-// Placeholder — replace once the polling-sim story is scoped.
-// Same shape as scrollyviz-example: one entry per step, index aligns with scenes.js.
 export const steps = [
   {
-    title: 'TODO: opening beat',
-    body: 'Placeholder copy. Replace once the story is scoped.',
-  },
-  {
-    title: 'TODO: second beat',
-    body: 'Placeholder copy.',
+    title: 'One dot, one voter',
+    body: 'Below is a theoretical poll of 5,000 UK voters. Every dot is one person — hover any of them to see who they are. Stacked together, the dots become a bar: taller means more voters chose that party.',
   },
 ];

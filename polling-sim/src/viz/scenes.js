@@ -1,3 +1,5 @@
-// Placeholder storyboard — same role as scrollyviz-example/src/viz/scenes.js:
-// a declarative step index → chart state. Fill in once the chart type is chosen.
-export const scenes = [{ id: 0 }, { id: 1 }];
+// Only one beat exists so far: the full dot chart, all at once. As the story
+// grows (highlighting a demographic, isolating switchers, etc.) this is
+// where those beats get declared — see scrollyviz-example/src/viz/scenes.js
+// for the pattern.
+export const scenes = [{ id: 0 }];

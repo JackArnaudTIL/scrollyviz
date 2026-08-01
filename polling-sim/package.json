@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "WIP — the more ambitious scroll. Story and visualization not yet designed; scaffold only.",
+  "description": "The more ambitious scroll: a scrollytelling piece built on a synthetic UK general-election poll.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gen:data": "node scripts/generate-voters.mjs"
   },
   "devDependencies": {
     "vite": "^5.4.0"

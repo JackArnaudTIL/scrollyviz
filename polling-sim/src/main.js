@@ -6,8 +6,10 @@ import { steps } from './content/steps.js';
 import { createGraphic } from './viz/graphic.js';
 import { initScroller } from 'scrolly-core/scroller.js';
 
-// Same bootstrap sequence as scrollyviz-example: build steps → load data →
-// build graphic once → wire the scroller.
+// Same bootstrap sequence as scrollyviz-example, minus one thing: no eager
+// renderScene(0) here. Data loads and the empty SVG shell builds immediately,
+// but nothing becomes visible until Scrollama says the reader has scrolled
+// to the step — see scrolly-core/scroller.js and graphic.js's renderScene.
 async function main() {
   buildSteps();
 
@@ -15,7 +17,6 @@ async function main() {
 
   const container = document.getElementById('graphic');
   const graphic = createGraphic(container, data).init();
-  graphic.renderScene(0);
 
   initScroller(graphic);
 }
