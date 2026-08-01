@@ -1,0 +1,151 @@
+/* ---- Design tokens ---------------------------------------------------------
+   A cool, editorial "instrument panel" identity: warm-neutral paper, deep ink,
+   one saturated teal for structure and a single amber reserved for the data the
+   reader should look at. Reset these six values to re-skin the whole piece. */
+:root {
+  --paper: #fbfbf9;
+  --ink: #16202a;
+  --muted: #5a6b78;
+  --hair: #e4e7ea;
+  --accent: #1f6f78; /* teal — structure, reference line */
+  --data: #e0872a;   /* amber — the value line, used sparingly */
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Spectral', Georgia, serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  --measure: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Intro / outro --------------------------------------------------------- */
+.intro,
+.outro {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+}
+
+.standfirst {
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 28rem;
+  margin: 0;
+}
+
+.outro {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* ---- Chart --------------------------------------------------------------- */
+.value-line {
+  fill: none;
+  stroke: var(--data);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.area {
+  fill: var(--data);
+  fill-opacity: 0.1;
+  stroke: none;
+}
+
+.target-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.highlight-band {
+  fill: var(--accent);
+  fill-opacity: 0.08;
+}
+
+.annotation-dot {
+  fill: var(--data);
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
+.annotation-label {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.axis text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  fill: var(--muted);
+}
+
+.axis path,
+.axis line {
+  stroke: var(--hair);
+}
+
+.error {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ---- Accessibility floor --------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

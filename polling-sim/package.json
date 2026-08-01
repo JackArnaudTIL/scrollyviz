@@ -1,0 +1,19 @@
+{
+  "name": "polling-sim",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "WIP — the more ambitious scroll. Story and visualization not yet designed; scaffold only.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "scrolly-core": "*"
+  }
+}

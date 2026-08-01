@@ -1,0 +1,98 @@
+/* ---- The scrollytelling layout --------------------------------------------
+   This is the part that makes or breaks the effect. The .graphic column is
+   sticky and full-height; the .steps column is a stack of tall text blocks that
+   scroll past it. Get this working before touching the chart. */
+
+.scrolly {
+  position: relative;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* The pinned graphic. sticky + 100vh height keeps it in view while steps flow. */
+.graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphic svg {
+  width: 100%;
+  height: 82vh;
+}
+
+/* Steps: each block needs enough vertical room to create scroll distance
+   between scene transitions. */
+.steps {
+  position: relative;
+}
+
+.step {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+}
+
+.step p {
+  margin: 0;
+  max-width: 26rem;
+}
+
+/* A card treatment that lifts the active step, so the reader always knows which
+   text the graphic is responding to. */
+.step > * {
+  background: var(--paper);
+  transition: opacity 0.3s ease;
+  opacity: 0.35;
+}
+
+.step.is-active > * {
+  opacity: 1;
+}
+
+/* ---- Mobile: stack the graphic above the text ------------------------------ */
+@media (max-width: 720px) {
+  .scrolly {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* On narrow screens the sticky graphic sits at the top and text scrolls under. */
+  .graphic {
+    top: 0;
+    height: 62vh;
+    background: var(--paper);
+    z-index: 1;
+  }
+
+  .graphic svg {
+    height: 56vh;
+  }
+
+  .step {
+    min-height: 78vh;
+  }
+
+  .step > * {
+    padding: 1rem;
+    border: 1px solid var(--hair);
+    border-radius: 6px;
+  }
+}

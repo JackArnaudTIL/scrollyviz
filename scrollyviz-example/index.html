@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollytelling data viz</title>
+
+    <!-- Type: characterful grotesque for display, editorial serif for reading,
+         monospace for data/axis labels. Swap these to reset the identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="intro">
+      <p class="eyebrow">Field note — sample</p>
+      <h1>A headline that states the piece's one idea</h1>
+      <p class="standfirst">
+        Replace this with a sentence that frames what the reader is about to
+        scroll through. Scroll down to begin.
+      </p>
+    </header>
+
+    <!-- The scrollytelling core: a sticky <figure> that stays pinned while the
+         .step blocks scroll past it. Each .step carries a data-step index that
+         the scroller maps to a scene. Prose in main.js keeps text and graphic
+         decoupled, but authoring copy inline here is also fine. -->
+    <main class="scrolly">
+      <figure class="graphic" id="graphic" aria-label="Animated chart">
+        <!-- SVG is injected here by src/viz/graphic.js -->
+      </figure>
+
+      <div class="steps" id="steps">
+        <!-- .step elements are generated from src/content/steps.js in main.js -->
+      </div>
+    </main>
+
+    <footer class="outro">
+      <p>Built with Vite, D3, and Scrollama. Data is illustrative placeholder.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
