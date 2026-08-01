@@ -1,7 +1,10 @@
 // Single source of truth for the party list: identity, display order, and
-// color. Order is fixed (not re-sorted by vote share) for two reasons: (1) a
-// stable spatial layout across scroll/scenes, and (2) it's the order the
-// palette was validated against — see the comment below before reordering.
+// color. This array's OWN order is what parties.js was validated against —
+// see the comment below before reordering it — but graphic.js's chart/legend
+// no longer render in this order verbatim: it re-sorts by count, with
+// isResidual entries forced to the bottom regardless of their count (see
+// displayParties in graphic.js). The CSV export is the one thing that still
+// uses this array's raw order, untouched.
 //
 // Colors are the dataviz skill's documented default categorical palette
 // (references/palette.md), reassigned by real-world party brand association
@@ -12,6 +15,13 @@
 // by a cool one — validated both light and dark with
 // dataviz/scripts/validate_palette.js. Reordering these entries can
 // reintroduce a failing adjacent pair; re-run the validator if you do.
+//
+// "Don't know" is deliberately NOT part of that 8-hue categorical set — a
+// 9th hue would mean re-validating the whole palette from scratch, and more
+// to the point, undecided isn't a party identity to encode alongside the
+// real ones. It gets --ink-muted instead: the same neutral used for
+// secondary UI text everywhere else, reading as "no answer" rather than
+// competing for hue-identity against Labour/Reform/etc.
 export const PARTIES = [
   {
     key: 'labour',
@@ -57,9 +67,17 @@ export const PARTIES = [
   },
   {
     key: 'other',
-    name: 'Other / don’t know',
-    short: 'Other / DK',
+    name: 'Other',
+    short: 'Other',
     color: { light: '#e87ba4', dark: '#d55181' },
+    isResidual: true, // always sorts last in the chart/legend — see graphic.js
+  },
+  {
+    key: 'dontknow',
+    name: 'Don’t know',
+    short: 'Don’t know',
+    color: { light: '#898781', dark: '#898781' }, // --ink-muted, not a categorical hue — see the file-top comment
+    isResidual: true,
   },
 ];
 

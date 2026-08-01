@@ -6,6 +6,7 @@
 :root {
   color-scheme: light;
   --page: #f9f9f7;
+  --page-frame: #eeece5; /* the side panels flanking .page — a touch darker than --page, not a competing surface */
   --surface: #fcfcfb;
   --ink: #0b0b0b;
   --ink-secondary: #52514e;
@@ -30,6 +31,7 @@
   :root:where(:not([data-theme='light'])) {
     color-scheme: dark;
     --page: #0d0d0d;
+    --page-frame: #050504; /* darker still than --page in this direction — --hairline goes the other way here */
     --surface: #1a1a19;
     --ink: #ffffff;
     --ink-secondary: #c3c2b7;
@@ -50,6 +52,7 @@
 :root[data-theme='dark'] {
   color-scheme: dark;
   --page: #0d0d0d;
+  --page-frame: #050504;
   --surface: #1a1a19;
   --ink: #ffffff;
   --ink-secondary: #c3c2b7;
@@ -73,7 +76,11 @@
 
 body {
   margin: 0;
-  background: var(--page);
+  /* --page-frame, not --page: the body itself is the pair of side panels
+     flanking .page (below), visible in the margins on any viewport wider
+     than .page's own 68rem cap. Slightly darker, not a competing surface —
+     a frame, not another card. */
+  background: var(--page-frame);
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
@@ -81,19 +88,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* The actual page: one consistent width for the whole reading column —
+   .intro/.outro's own (narrower) max-width centers their text inside this,
+   and main.scrolly's own 68rem cap (see further down) just matches it
+   exactly, so nothing about their own widths needed to change. */
+.page {
+  max-width: 68rem;
+  margin: 0 auto;
+  background: var(--page);
+}
+
 .intro,
 .outro {
   max-width: var(--measure);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.0rem;
 }
 
 .intro {
   /* Tall on purpose: the title sits near the top, then the reader scrolls
      through a deliberate stretch of nothing before the sticky chart even
      enters view — a beat to sit with the headline before the data starts. */
-  min-height: 100vh;
-  padding-top: 12vh;
+  min-height: 50vh;
+  padding-top: 36vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -124,29 +141,68 @@ h1 {
 }
 
 .steps .step {
-  /* Longer than the shared 92vh default: dots still finish entering by
-     ENTRY_END_FRAC (0.7) of this scroll distance, but a bigger distance
-     means that trailing 30% is now a genuinely long, noticeable pause
-     instead of a quick blip — see graphic.js's applyProgress(). Needs the
-     extra `.steps` ancestor: main.js loads this file BEFORE
+  /* Longer than the shared 92vh default: the full sequence — axis, dots,
+     labels, text, pause — all happens within this one step's scroll
+     distance, measured from graphic.js's PHASE constants. Needs the extra
+     `.steps` ancestor: main.js loads this file BEFORE
      scrolly-core/scrollytelling.css, so a bare `.step` here has equal
      specificity to the shared rule and loses on source order. */
-  min-height: 180vh;
+  min-height: 480vh;
 }
 
-/* Scroll-linked text motion — edit this to change how the step text moves.
-   scroller.js sets --step-progress to a live 0→1 value as the reader
-   scrolls through the step (independent of `offset` above, and not just
-   on/off like the shared .is-active fade this overrides). RAMP_END is
-   where the reader stands when this rule should be fully "arrived" —
-   currently a quarter of the way in, so the text settles early and holds,
-   same spirit as the dots' own pause. Try swapping the translateY distance,
-   the opacity floor, or RAMP_END itself. */
-.steps .step > * {
-  --ramp: min(1, var(--step-progress, 0) / 0.25); /* 0.25 = RAMP_END */
+/* The text's own positioning within that tall step — sticky, not a fixed
+   document offset: it scrolls up with the reader until it reaches top: 38vh,
+   then holds there (like .graphic's own pin, just lower) for the rest of
+   the step's scroll distance, instead of continuing on past the top of the
+   viewport before the reader's done scrolling through the rest of the step.
+   No shared rule sets position/top on this class, so no specificity fight
+   here — unlike .steps .step and the opacity/transform rule below.
+
+   min-height matters more than it looks: a sticky element releases once its
+   OWN margin-box has scrolled past (containing block's bottom edge reaches
+   top + own height). .graphic releases at top(0) + height(100vh) = 100vh
+   from its container's bottom. This text's real content is only ~180px
+   tall, so left alone it released at top(38vh) + ~180px — well before the
+   chart did, and for that whole gap the two visibly drifted apart (chart
+   already scrolling away while the text stayed frozen). Padding the box out
+   to the same 100vh - 38vh = 62vh budget makes it release at the exact same
+   scroll position as .graphic, so they move as one pair right up to when
+   both let go together. If top (38vh) changes, this must too.
+
+   That ~180px estimate assumed one short paragraph. steps.js now supports
+   several (see its own comment) — if a step's copy grows enough to approach
+   62vh of actual rendered height, min-height stops being the bigger number
+   and the sync above quietly breaks again the same way. Not a problem for
+   today's content; worth a real re-check if a step ever gets that long. */
+.step-content {
+  position: sticky;
+  top: 38vh;
+  min-height: 62vh;
+}
+/* Multiple <p> in one step (see steps.js) need visible separation — the
+   shared .step p rule sets margin: 0 on all of them equally, which is right
+   for a single paragraph but runs several together with no gap. */
+.step-content p + p {
+  margin-top: 0.9rem;
+}
+
+/* Scroll-linked text motion (phase 4 of graphic.js's sequence) — edit this
+   to change how the step text moves. --chart-progress is set by
+   scroller.js from whatever graphic.js's renderProgress() returns: here,
+   progress rebased to count from when the chart locks into its pinned
+   position, not from raw step-entry, so this stays in step with the
+   axis/dots/labels phases instead of running on its own independent clock.
+   TEXT_START/TEXT_END below must match graphic.js's PHASE.textStart/textEnd.
+   Selector needs `main.scrolly` on the front: the shared
+   `.step.is-active > *` rule (scrollytelling.css) is ALSO two classes deep,
+   ties this rule's specificity, and loads after this file — without the
+   extra qualifier it silently wins and forces opacity:1 the instant the
+   step activates, ignoring --chart-progress entirely. */
+main.scrolly .step > * {
+  --ramp: clamp(0, (var(--chart-progress, 0) - 0.13) / 0.22, 1); /* 0.57 = TEXT_START, 0.11 = TEXT_END(0.68) - TEXT_START */
   opacity: max(0.35, var(--ramp));
-  transform: translateY(calc((1 - var(--ramp)) * 16px));
-  /* No transition: --step-progress already updates every scroll frame, so
+  transform: translateY(calc((1 - var(--ramp)) * 0px));
+  /* No transition: --chart-progress already updates every scroll frame, so
      this tracks the scroll position directly — a CSS transition here would
      make it visibly lag a beat behind, chasing a value that's already
      moved on. */
@@ -154,7 +210,7 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .steps .step > * {
+  main.scrolly .step > * {
     opacity: 1;
     transform: none;
   }
@@ -169,13 +225,54 @@ h1 {
   min-width: 0;
 }
 
+/* The shared .scrolly splits graphic/steps 1fr 1fr — fine for a chart that
+   fits in half the page, not for a horizontal bar chart whose length
+   dimension needs real room. main.scrolly (element + class) outranks the
+   shared bare-class rule regardless of CSS import order, same reasoning as
+   .steps .step above.
+   Media-query-gated to match the shared mobile breakpoint (720px): without
+   this guard, this rule's higher specificity silently wins there too,
+   overriding the shared rule's grid-template-columns: 1fr and defeating the
+   single-column mobile stack it's meant to produce. */
+@media (min-width: 721px) {
+  main.scrolly {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Matrix mode (graphic.js's toggleMatrix) spreads the chart across the full
+   width and hides the step text. .steps' own size/grid position is NEVER
+   touched, on purpose — two earlier approaches both did, and both broke
+   something real: making .graphic span both grid tracks silently broke its
+   OWN sticky pin (its rect.top stopped being 0 the moment it spanned
+   multiple tracks); collapsing .steps' column to ~0 width instead broke
+   Scrollama's own tracking of .step (its progress froze at 1 and stopped
+   updating the moment that column collapsed — a real geometry dependency,
+   not a guess). Neither was a CSS reasoning error so much as "this DOM
+   element has two unrelated jobs — a sticky chart, a Scrollama-tracked
+   scroll target — and resizing/repositioning it for a THIRD, purely visual
+   reason breaks one of the other two." So instead: .graphic gets an
+   explicit width WIDER than its own grid cell (set from JS — see
+   transitionToMatrix, which measures .steps' actual current width first,
+   rather than a hardcoded CSS calc() tied to the 2fr/1fr ratio staying
+   exactly what it is today) and visually overflows into .steps' column.
+   Grid doesn't clip that overflow by default, and nothing here sets
+   overflow: hidden to stop it. */
+main.scrolly.matrix-active .steps {
+  pointer-events: none;
+}
+main.scrolly.matrix-active .step-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .outro {
   /* Scrollama needs somewhere for the last step to scroll away TO — without
      enough trailing room, its scroll progress can't reach 1 and the dots
      furthest into a bar never fully arrive. min-height buys that room; the
      flex centering (matching .intro) makes it read as a deliberate closing
      beat rather than leftover space. */
-  min-height: 20vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,7 +286,8 @@ h1 {
   text-align: center;
 }
 
-/* ---- Party swatch: shared by SVG dots and the HTML legend ---------------- */
+/* ---- Party swatch: shared by SVG dots, the HTML legend, and the splits
+   explorer's own dots/bars/legend further down the page ------------------- */
 .dot-labour { fill: var(--party-labour); background: var(--party-labour); }
 .dot-conservative { fill: var(--party-conservative); background: var(--party-conservative); }
 .dot-libdem { fill: var(--party-libdem); background: var(--party-libdem); }
@@ -198,6 +296,9 @@ h1 {
 .dot-green { fill: var(--party-green); background: var(--party-green); }
 .dot-plaid { fill: var(--party-plaid); background: var(--party-plaid); }
 .dot-other { fill: var(--party-other); background: var(--party-other); }
+/* --ink-muted, not a --party-* token — deliberately not a categorical hue,
+   see parties.js's comment on the dontknow entry. */
+.dot-dontknow { fill: var(--ink-muted); background: var(--ink-muted); }
 
 /* ---- The dot chart --------------------------------------------------------
    Single child of the shared sticky `.graphic` figure; fills it and owns its
@@ -211,13 +312,11 @@ h1 {
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem 0.5rem 0.5rem;
-  /* Nothing here — chart, legend, table — shows until the reader scrolls to
-     the step; graphic.js flips this class on the first renderScene(). */
+  /* Nothing here — chart, legend, download link — shows until the reader
+     scrolls to the step. graphic.js drives this opacity directly, scroll-frame by
+     scroll-frame (PHASE.axisEnd) — no transition: a fixed-duration fade
+     here would let a fast scroller outrun it and blur into the next phase. */
   opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.graphic .dotchart.is-revealed {
-  opacity: 1;
 }
 
 .dot {
@@ -278,8 +377,14 @@ h1 {
 .legend {
   flex: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1rem;
+  /* nowrap, not wrap: space-between only spreads items across a row that
+     actually HAS more than one item in it — with wrap, a 9th item alone on
+     a trailing second line has nothing to space itself against and just
+     sits at the left, which isn't "spread over the available area." One row
+     forces every item to participate in the same distribution. */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.4rem 0.5rem; /* space-between fills remaining room on its own when there's space; this is only the floor for when there isn't */
   font-size: 0.78rem;
   color: var(--ink-secondary);
 }
@@ -287,6 +392,10 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  /* Keeps each label on one line even as nowrap (above) compresses items to
+     fit — without this, a squeezed item wraps its OWN text into two lines
+     instead, giving the row uneven heights item to item. */
+  white-space: nowrap;
 }
 .legend-swatch {
   width: 0.7rem;
@@ -312,6 +421,14 @@ h1 {
   max-width: 14rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
+/* The browser's own [hidden] { display: none } is a (0,1,0) attribute
+   selector — exactly tied with .dot-tooltip's own (0,1,0) class selector
+   above, and this file loads after the UA stylesheet, so display: flex
+   silently won regardless of the hidden attribute: hideTooltip() was
+   setting `hidden` and having zero visible effect. This rule outranks both. */
+.dot-tooltip[hidden] {
+  display: none;
+}
 .dot-tooltip strong {
   font-size: 0.85rem;
 }
@@ -320,32 +437,20 @@ h1 {
   opacity: 0.8;
 }
 
-/* ---- Table view: the accessibility relief channel ------------------------ */
-.data-table {
+/* ---- Data download: the accessibility relief channel ---------------------
+   Same party/count/share data as the chart, as a plain CSV — no dot-counting
+   required to get the numbers back out. */
+.data-download {
   flex: none;
+  align-self: flex-start;
   font-size: 0.8rem;
-  color: var(--ink-secondary);
-}
-.data-table summary {
-  cursor: pointer;
   color: var(--accent);
   font-weight: 600;
+  text-decoration: none;
 }
-.data-table table {
-  margin-top: 0.5rem;
-  border-collapse: collapse;
-  width: 100%;
-}
-.data-table th,
-.data-table td {
-  text-align: left;
-  padding: 0.35rem 0.6rem 0.35rem 0;
-  border-bottom: 1px solid var(--hairline);
-}
-.data-table td.num,
-.data-table th:not(:first-child) {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
+.data-download:hover,
+.data-download:focus-visible {
+  text-decoration: underline;
 }
 
 :focus-visible {
@@ -358,4 +463,80 @@ h1 {
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
   }
+}
+
+/* ---- Matrix explorer: the post-story mode of the SAME chart above, not a
+   separate section — see graphic.js's transitionToMatrix. Always present in
+   the DOM (never inserted/removed) so its size never changes when it
+   appears, which would otherwise shift the plot underneath it; opacity +
+   pointer-events are what actually gate visibility/interactivity. ---------- */
+.matrix-controls {
+  flex: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.matrix-controls.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.matrix-buttons {
+  display: flex;
+  flex-wrap: nowrap; /* same reasoning as .legend above */
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.matrix-button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+.matrix-button:hover {
+  color: var(--ink);
+  border-color: var(--ink-secondary);
+}
+.matrix-button.is-active {
+  color: var(--page);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.matrix-button:disabled {
+  cursor: default;
+}
+/* :focus-visible already global (see above) — no redeclare needed here. */
+
+.matrix-col-header {
+  font-size: 0.62rem;
+  font-weight: 600;
+  fill: var(--ink-secondary);
+}
+
+/* Reuses .dot-<partyKey> (above) for fill — same swatch classes the
+   individual dots and the legend already use, just on a <rect> instead of a
+   <circle>. */
+.matrix-bar {
+  stroke: var(--surface);
+  stroke-width: 1;
+}
+.matrix-bar:hover,
+.matrix-bar:focus-visible {
+  stroke: var(--ink);
+}
+
+/* Floats over the dots/bars beneath it — --surface (not a hardcoded white)
+   so it stays a solid, legible "card" in dark mode too, rather than a stray
+   white square once the rest of the chart inverts. */
+.matrix-percent-bg {
+  fill: var(--surface);
+}
+.matrix-percent-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  fill: var(--ink);
 }

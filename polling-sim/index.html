@@ -4,26 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A theoretical poll, one voter at a time</title>
+
+    <!-- As a <link>, not a JS import (see main.js) — a <link rel="stylesheet">
+         blocks first paint until CSS is ready, so the raw HTML (title
+         top-left, browser default font) never flashes unstyled before the
+         module graph finishes executing. scrolly-core's shared CSS stays a
+         JS import: it lives outside this app (a workspace package) and only
+         styles the graphic/scroll layout, nothing visible before JS runs
+         anyway. Keep it importing AFTER this <link> in main.js — several
+         rules in main.css depend on winning same-specificity ties by
+         loading later, see its own comments. -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <header class="intro">
-      <p class="eyebrow">Field note — synthetic data</p>
-      <h1>5,000 voters, one dot each</h1>
-      <p class="standfirst">
-        A theoretical UK general-election poll — not real data, built to explore
-        what a poll looks like at the level of individual people rather than a
-        single percentage. Scroll down to begin.
-      </p>
-    </header>
+    <div class="page">
+      <header class="intro">
+        <p class="eyebrow">Personal Project — synthetic data</p>
+        <h1>Polling explained, vote by vote</h1>
+        <p class="standfirst">
+          <br>
+          Explore polling through a fake poll for a UK general election, based roughly on recent polling aggregates. 
+          Built to explore what a poll looks like at the level of individual people rather than a
+          single percentage.
+        </p>
+        <p class="standfirst">
+          <br>
+          Scroll down to begin.
+        </p>
+      </header>
 
-    <main class="scrolly">
-      <figure class="graphic" id="graphic" aria-label="Voting intention chart"></figure>
-      <div class="steps" id="steps"></div>
-    </main>
+      <main class="scrolly">
+        <figure class="graphic" id="graphic" aria-label="Voting intention chart"></figure>
+        <div class="steps" id="steps"></div>
+      </main>
 
-    <footer class="outro">
-      <p>Synthetic, illustrative data — not a real poll. Built with Vite, D3, and Scrollama.</p>
-    </footer>
+      <footer class="outro">
+        <p>Synthetic, illustrative data — not a real poll. Built with Vite, D3, and Scrollama.</p>
+      </footer>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -83,6 +83,10 @@ const VOTE_2019 = ['Conservative', 'Labour', 'Liberal Democrat', 'SNP', 'Green',
 // ---- current-intention model ------------------------------------------------
 // National baseline (a theoretical scenario: Reform surging near Labour,
 // Conservative depressed), sums to 100.
+// other/dontknow split from the old combined `other: 8`: don't-know is the
+// bigger of the two, matching how real UK polls usually break it down —
+// genuine "some other party" voters are a smaller residual than the
+// undecided/declined-to-say share.
 const BASE_SHARE = {
   labour: 24,
   conservative: 19,
@@ -91,9 +95,14 @@ const BASE_SHARE = {
   snp: 4,
   green: 8,
   plaid: 1,
-  other: 8,
+  other: 3,
+  dontknow: 5,
 };
 
+// dontknow has no entry here (or in EDU_MULT/REGION_MULT below) — it falls
+// back to a flat 1x via the `?? 1` in pickIntention, deliberately: unlike a
+// real party choice, being undecided doesn't skew as legibly by age/education
+// /region for illustrative data, so it's just base share + past-vote below.
 const AGE_MULT = {
   '18-24': { labour: 1.5, conservative: 0.4, libdem: 1.3, reform: 0.5, green: 2.2, other: 1.3 },
   '25-34': { labour: 1.3, conservative: 0.6, libdem: 1.1, reform: 0.6, green: 1.6, other: 1.1 },
@@ -133,8 +142,8 @@ const PAST_VOTE_MULT = {
   Green: { green: 3.0, labour: 1.2 },
   'Plaid Cymru': { plaid: 3.0, labour: 1.1 },
   'Brexit Party': { reform: 3.0, conservative: 1.3, labour: 0.5 },
-  Other: { other: 1.6 },
-  'Did not vote': { other: 1.8, labour: 0.9, conservative: 0.9 },
+  Other: { other: 2.2 },
+  'Did not vote': { dontknow: 2.5, other: 1.2, labour: 0.9, conservative: 0.9 },
 };
 
 // SNP/Plaid are only on the ballot the voter would actually consider outside

@@ -1,4 +1,8 @@
-import './styles/main.css';
+// main.css is loaded via a <link> in index.html, not imported here — see
+// the comment there. scrollytelling.css stays a JS import: it only styles
+// the graphic/scroll layout, nothing visible before JS runs anyway. Keep
+// this import AFTER the <link> loads — main.css depends on winning
+// same-specificity ties by loading later relative to this rule.
 import 'scrolly-core/scrollytelling.css';
 
 import { loadData } from './data/loader.js';
@@ -24,13 +28,18 @@ async function main() {
 function buildSteps() {
   const wrap = document.getElementById('steps');
   wrap.innerHTML = steps
-    .map(
-      (s, i) => `
+    .map((s, i) => {
+      // A single string still works (one paragraph) — content authors don't
+      // have to wrap a one-off step in an array just to satisfy this.
+      const paragraphs = Array.isArray(s.body) ? s.body : [s.body];
+      return `
         <section class="step" data-step="${i}">
-          <h2>${s.title}</h2>
-          <p>${s.body}</p>
-        </section>`
-    )
+          <div class="step-content">
+            <h2>${s.title}</h2>
+            ${paragraphs.map((p) => `<p>${p}</p>`).join('')}
+          </div>
+        </section>`;
+    })
     .join('');
 }
 

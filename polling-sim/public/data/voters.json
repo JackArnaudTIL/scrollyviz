@@ -8,50 +8,56 @@
       {
         "key": "labour",
         "name": "Labour",
-        "count": 1285,
-        "share": 0.257
+        "count": 1276,
+        "share": 0.2552
       },
       {
         "key": "conservative",
         "name": "Conservative",
-        "count": 891,
-        "share": 0.1782
+        "count": 888,
+        "share": 0.1776
       },
       {
         "key": "libdem",
         "name": "Liberal Democrat",
-        "count": 619,
-        "share": 0.1238
+        "count": 615,
+        "share": 0.123
       },
       {
         "key": "reform",
         "name": "Reform UK",
-        "count": 1212,
-        "share": 0.2424
+        "count": 1208,
+        "share": 0.2416
       },
       {
         "key": "snp",
         "name": "Scottish National Party",
-        "count": 159,
-        "share": 0.0318
+        "count": 157,
+        "share": 0.0314
       },
       {
         "key": "green",
         "name": "Green",
-        "count": 349,
-        "share": 0.0698
+        "count": 341,
+        "share": 0.0682
       },
       {
         "key": "plaid",
         "name": "Plaid Cymru",
-        "count": 21,
-        "share": 0.0042
+        "count": 22,
+        "share": 0.0044
       },
       {
         "key": "other",
-        "name": "Other / don’t know",
-        "count": 464,
-        "share": 0.0928
+        "name": "Other",
+        "count": 146,
+        "share": 0.0292
+      },
+      {
+        "key": "dontknow",
+        "name": "Don’t know",
+        "count": 347,
+        "share": 0.0694
       }
     ]
   },
@@ -65,7 +71,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -101,7 +107,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 8
     },
     {
@@ -377,7 +383,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -449,7 +455,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -593,7 +599,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -725,7 +731,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -737,7 +743,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -761,7 +767,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 2
     },
     {
@@ -905,7 +911,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -1181,7 +1187,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -1253,7 +1259,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -1277,7 +1283,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -1349,7 +1355,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -1517,7 +1523,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -1661,7 +1667,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -1769,7 +1775,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -1877,7 +1883,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -1985,7 +1991,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -2033,7 +2039,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -2069,7 +2075,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -2141,7 +2147,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -2273,7 +2279,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -2345,7 +2351,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -2453,7 +2459,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -2477,7 +2483,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -2741,7 +2747,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -2813,7 +2819,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -2873,7 +2879,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Brexit Party",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -2981,7 +2987,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -3185,7 +3191,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -3221,7 +3227,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -3365,7 +3371,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -3533,7 +3539,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 2
     },
     {
@@ -3749,7 +3755,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -3773,7 +3779,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -3785,7 +3791,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -3857,7 +3863,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -3965,7 +3971,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -4049,7 +4055,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -4121,7 +4127,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -4241,7 +4247,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -4301,7 +4307,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 6
     },
     {
@@ -4529,7 +4535,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -4697,7 +4703,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -4733,7 +4739,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -4877,7 +4883,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -5165,7 +5171,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -5213,7 +5219,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -5285,7 +5291,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -5297,7 +5303,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -5357,7 +5363,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -5369,7 +5375,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -5573,7 +5579,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -5669,7 +5675,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -5693,7 +5699,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -5813,7 +5819,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -5897,7 +5903,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 3
     },
     {
@@ -5993,7 +5999,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 3
     },
     {
@@ -6209,7 +6215,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 7
     },
     {
@@ -6257,7 +6263,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -6557,7 +6563,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -6617,7 +6623,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 5
     },
     {
@@ -6629,7 +6635,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 6
     },
     {
@@ -6689,7 +6695,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -6725,7 +6731,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -6773,7 +6779,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -7061,7 +7067,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -7109,7 +7115,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -7121,7 +7127,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 6
     },
     {
@@ -7421,7 +7427,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -7505,7 +7511,7 @@
       "country": "Wales",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -7709,7 +7715,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -7757,7 +7763,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -7925,7 +7931,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -7973,7 +7979,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -8081,7 +8087,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -8321,7 +8327,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -8453,7 +8459,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 8
     },
     {
@@ -8549,7 +8555,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -8693,7 +8699,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -8777,7 +8783,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -8993,7 +8999,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -9065,7 +9071,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 7
     },
     {
@@ -9449,7 +9455,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -9485,7 +9491,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -9641,7 +9647,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -9677,7 +9683,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -9761,7 +9767,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -9785,7 +9791,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -9809,7 +9815,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -10013,7 +10019,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "snp",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -10157,7 +10163,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -10337,7 +10343,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -10409,7 +10415,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 9
     },
     {
@@ -10709,7 +10715,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -10721,7 +10727,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -10745,7 +10751,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -10829,7 +10835,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -10853,7 +10859,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -10937,7 +10943,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -11021,7 +11027,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -11165,7 +11171,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -11237,7 +11243,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 2
     },
     {
@@ -11357,7 +11363,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -11429,7 +11435,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -11453,7 +11459,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -11501,7 +11507,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -11525,7 +11531,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -11753,7 +11759,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "reform",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 5
     },
     {
@@ -11765,7 +11771,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -11945,7 +11951,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -12185,7 +12191,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -12293,7 +12299,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -12341,7 +12347,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 5
     },
     {
@@ -12353,7 +12359,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -12497,7 +12503,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -12509,7 +12515,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -12533,7 +12539,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -12581,7 +12587,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -12605,7 +12611,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -12641,7 +12647,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -12941,7 +12947,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -13061,7 +13067,7 @@
       "country": "Wales",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -13085,7 +13091,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -13109,7 +13115,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -13229,7 +13235,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 8
     },
     {
@@ -13493,7 +13499,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -13589,7 +13595,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "libdem",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 4
     },
     {
@@ -13709,7 +13715,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Plaid Cymru",
-      "voteIntention": "green",
+      "voteIntention": "plaid",
       "turnoutLikelihood": 8
     },
     {
@@ -13949,7 +13955,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 9
     },
     {
@@ -14033,7 +14039,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -14069,7 +14075,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -14225,7 +14231,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -14321,7 +14327,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -14345,7 +14351,7 @@
       "country": "Wales",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -14477,7 +14483,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -14609,7 +14615,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -14645,7 +14651,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -14669,7 +14675,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 3
     },
     {
@@ -14729,7 +14735,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "snp",
+      "voteIntention": "reform",
       "turnoutLikelihood": 3
     },
     {
@@ -15029,7 +15035,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 8
     },
     {
@@ -15377,7 +15383,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -15473,7 +15479,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 9
     },
     {
@@ -15605,7 +15611,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -15689,7 +15695,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -15725,7 +15731,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -16133,7 +16139,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -16157,7 +16163,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -16301,7 +16307,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -16373,7 +16379,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -16577,7 +16583,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -16769,7 +16775,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 1
     },
     {
@@ -16793,7 +16799,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -16985,7 +16991,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -17165,7 +17171,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 5
     },
     {
@@ -17501,7 +17507,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 3
     },
     {
@@ -17657,7 +17663,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -17765,7 +17771,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -17789,7 +17795,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -17885,7 +17891,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -17933,7 +17939,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -18053,7 +18059,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -18125,7 +18131,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -18233,7 +18239,7 @@
       "country": "Wales",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -18293,7 +18299,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -18341,7 +18347,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -18641,7 +18647,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -18665,7 +18671,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -18713,7 +18719,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -18725,7 +18731,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -18905,7 +18911,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -19133,7 +19139,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 9
     },
     {
@@ -19817,7 +19823,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -19913,7 +19919,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -20165,7 +20171,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -20201,7 +20207,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -20297,7 +20303,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -20645,7 +20651,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -20873,7 +20879,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -20945,7 +20951,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -21353,7 +21359,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -21437,7 +21443,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -21497,7 +21503,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -21989,7 +21995,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 5
     },
     {
@@ -22013,7 +22019,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "SNP",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -22145,7 +22151,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -22157,7 +22163,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -22433,7 +22439,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -22553,7 +22559,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -22673,7 +22679,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Other",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -22997,7 +23003,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -23069,7 +23075,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -23117,7 +23123,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "SNP",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -23453,7 +23459,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -23525,7 +23531,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -23621,7 +23627,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -23753,7 +23759,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -23825,7 +23831,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -24173,7 +24179,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -24689,7 +24695,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -24785,7 +24791,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -24845,7 +24851,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "SNP",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -25013,7 +25019,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -25061,7 +25067,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -25181,7 +25187,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -25265,7 +25271,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -25325,7 +25331,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -25457,7 +25463,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -25493,7 +25499,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -25601,7 +25607,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -25697,7 +25703,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 3
     },
     {
@@ -25769,7 +25775,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "conservative",
+      "voteIntention": "labour",
       "turnoutLikelihood": 6
     },
     {
@@ -25781,7 +25787,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Other",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -25925,7 +25931,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -26033,7 +26039,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -26249,7 +26255,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -26309,7 +26315,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -26717,7 +26723,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -26729,7 +26735,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -26873,7 +26879,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -27017,7 +27023,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -27125,7 +27131,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 7
     },
     {
@@ -27269,7 +27275,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -27365,7 +27371,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Plaid Cymru",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -27377,7 +27383,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -27485,7 +27491,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 9
     },
     {
@@ -27521,7 +27527,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -27605,7 +27611,7 @@
       "country": "Wales",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -27857,7 +27863,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "labour",
       "turnoutLikelihood": 3
     },
     {
@@ -27917,7 +27923,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -28049,7 +28055,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -28109,7 +28115,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 7
     },
     {
@@ -28169,7 +28175,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -28265,7 +28271,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -28325,7 +28331,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -28337,7 +28343,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -28349,7 +28355,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -28505,7 +28511,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -28541,7 +28547,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -28661,7 +28667,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -28937,7 +28943,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -29285,7 +29291,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -29405,7 +29411,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -29489,7 +29495,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -29645,7 +29651,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "snp",
       "turnoutLikelihood": 5
     },
     {
@@ -29693,7 +29699,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -29801,7 +29807,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "snp",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -29873,7 +29879,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -30065,7 +30071,7 @@
       "country": "Wales",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -30437,7 +30443,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -30749,7 +30755,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -31073,7 +31079,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "snp",
       "turnoutLikelihood": 5
     },
     {
@@ -31169,7 +31175,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -31193,7 +31199,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -31229,7 +31235,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -31241,7 +31247,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -31289,7 +31295,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -31313,7 +31319,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -31385,7 +31391,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -31409,7 +31415,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -31517,7 +31523,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -31709,7 +31715,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -31985,7 +31991,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 2
     },
     {
@@ -32033,7 +32039,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -32213,7 +32219,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -32225,7 +32231,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -32261,7 +32267,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Other",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -32285,7 +32291,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -32333,7 +32339,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -32681,7 +32687,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -32705,7 +32711,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -32717,7 +32723,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -32969,7 +32975,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -33245,7 +33251,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -33269,7 +33275,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -33437,7 +33443,7 @@
       "country": "Wales",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -33557,7 +33563,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 4
     },
     {
@@ -33569,7 +33575,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -33629,7 +33635,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -33689,7 +33695,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -33761,7 +33767,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -33785,7 +33791,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 4
     },
     {
@@ -33821,7 +33827,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -33869,7 +33875,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -34145,7 +34151,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -34265,7 +34271,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "reform",
+      "voteIntention": "other",
       "turnoutLikelihood": 8
     },
     {
@@ -34277,7 +34283,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -34385,7 +34391,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 9
     },
     {
@@ -34433,7 +34439,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -34709,7 +34715,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -34733,7 +34739,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -34817,7 +34823,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -35069,7 +35075,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "SNP",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 9
     },
     {
@@ -35129,7 +35135,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -35357,7 +35363,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -35453,7 +35459,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "snp",
+      "voteIntention": "green",
       "turnoutLikelihood": 9
     },
     {
@@ -35801,7 +35807,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -35873,7 +35879,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Brexit Party",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -35909,7 +35915,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -35957,7 +35963,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -36569,7 +36575,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -36677,7 +36683,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -37193,7 +37199,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Other",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -37205,7 +37211,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -37493,7 +37499,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -37637,7 +37643,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -37697,7 +37703,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -37721,7 +37727,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -37781,7 +37787,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 2
     },
     {
@@ -38009,7 +38015,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -38045,7 +38051,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -38069,7 +38075,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -38381,7 +38387,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -38441,7 +38447,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -38453,7 +38459,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -38621,7 +38627,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -38645,7 +38651,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -38729,7 +38735,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -38897,7 +38903,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -39401,7 +39407,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -39533,7 +39539,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -39629,7 +39635,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -39725,7 +39731,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "libdem",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 6
     },
     {
@@ -40265,7 +40271,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -40337,7 +40343,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "plaid",
       "turnoutLikelihood": 8
     },
     {
@@ -40385,7 +40391,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -40493,7 +40499,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -40745,7 +40751,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -40949,7 +40955,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 1
     },
     {
@@ -40961,7 +40967,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -41009,7 +41015,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -41021,7 +41027,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -41105,7 +41111,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -41393,7 +41399,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "reform",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 5
     },
     {
@@ -41405,7 +41411,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -41477,7 +41483,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -41801,7 +41807,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -41885,7 +41891,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -41933,7 +41939,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -42185,7 +42191,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -42389,7 +42395,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -42413,7 +42419,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -42761,7 +42767,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -42929,7 +42935,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -42977,7 +42983,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -43265,7 +43271,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -43433,7 +43439,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -43457,7 +43463,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 6
     },
     {
@@ -43529,7 +43535,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 7
     },
     {
@@ -43637,7 +43643,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -43841,7 +43847,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -44093,7 +44099,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -44165,7 +44171,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 3
     },
     {
@@ -44237,7 +44243,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -44405,7 +44411,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -44441,7 +44447,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -44501,7 +44507,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -44669,7 +44675,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -44681,7 +44687,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -44777,7 +44783,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -44885,7 +44891,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -45125,7 +45131,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 9
     },
     {
@@ -45137,7 +45143,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -45293,7 +45299,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 3
     },
     {
@@ -45305,7 +45311,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "reform",
+      "voteIntention": "snp",
       "turnoutLikelihood": 8
     },
     {
@@ -45437,7 +45443,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -45605,7 +45611,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -45689,7 +45695,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -45713,7 +45719,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -45785,7 +45791,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -45917,7 +45923,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -46001,7 +46007,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -46049,7 +46055,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -46097,7 +46103,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Other",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -46145,7 +46151,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -46193,7 +46199,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 3
     },
     {
@@ -46241,7 +46247,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 8
     },
     {
@@ -46397,7 +46403,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -46445,7 +46451,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -46481,7 +46487,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -46541,7 +46547,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -46913,7 +46919,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -46937,7 +46943,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -47081,7 +47087,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -47093,7 +47099,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -47261,7 +47267,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -47405,7 +47411,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -47561,7 +47567,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 4
     },
     {
@@ -47585,7 +47591,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -47789,7 +47795,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -47957,7 +47963,7 @@
       "country": "Wales",
       "education": "A-level or equivalent",
       "vote2019": "Plaid Cymru",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -48029,7 +48035,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -48245,7 +48251,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -48269,7 +48275,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -48461,7 +48467,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -48497,7 +48503,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -48617,7 +48623,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -48641,7 +48647,7 @@
       "country": "Wales",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -48725,7 +48731,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Other",
-      "voteIntention": "conservative",
+      "voteIntention": "labour",
       "turnoutLikelihood": 4
     },
     {
@@ -48737,7 +48743,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -48773,7 +48779,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -48869,7 +48875,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -48917,7 +48923,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "libdem",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 4
     },
     {
@@ -48953,7 +48959,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -49073,7 +49079,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 4
     },
     {
@@ -49193,7 +49199,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -49409,7 +49415,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 8
     },
     {
@@ -49469,7 +49475,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 6
     },
     {
@@ -49601,7 +49607,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -49673,7 +49679,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -49733,7 +49739,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 6
     },
     {
@@ -49841,7 +49847,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -49949,7 +49955,7 @@
       "country": "Scotland",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -50273,7 +50279,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -50429,7 +50435,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -50633,7 +50639,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -50657,7 +50663,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Other",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 6
     },
     {
@@ -50837,7 +50843,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Brexit Party",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 6
     },
     {
@@ -50885,7 +50891,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -51041,7 +51047,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -51233,7 +51239,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -51389,7 +51395,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -51413,7 +51419,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -51437,7 +51443,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -51557,7 +51563,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 7
     },
     {
@@ -51617,7 +51623,7 @@
       "country": "Scotland",
       "education": "A-level or equivalent",
       "vote2019": "Other",
-      "voteIntention": "reform",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 6
     },
     {
@@ -51821,7 +51827,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -51869,7 +51875,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -52145,7 +52151,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -52193,7 +52199,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "reform",
       "turnoutLikelihood": 6
     },
     {
@@ -52601,7 +52607,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 3
     },
     {
@@ -52733,7 +52739,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -52925,7 +52931,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "conservative",
+      "voteIntention": "libdem",
       "turnoutLikelihood": 7
     },
     {
@@ -53177,7 +53183,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -53201,7 +53207,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -53237,7 +53243,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Green",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -53273,7 +53279,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 1
     },
     {
@@ -53297,7 +53303,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -53321,7 +53327,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 6
     },
     {
@@ -53369,7 +53375,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -53561,7 +53567,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 5
     },
     {
@@ -53609,7 +53615,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -53657,7 +53663,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 5
     },
     {
@@ -53969,7 +53975,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -54017,7 +54023,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -54053,7 +54059,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -54245,7 +54251,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -54269,7 +54275,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -54773,7 +54779,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -54785,7 +54791,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -54833,7 +54839,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 8
     },
     {
@@ -54929,7 +54935,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -55001,7 +55007,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 8
     },
     {
@@ -55025,7 +55031,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -55073,7 +55079,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "conservative",
+      "voteIntention": "labour",
       "turnoutLikelihood": 6
     },
     {
@@ -55109,7 +55115,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -55385,7 +55391,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -55541,7 +55547,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -55589,7 +55595,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Brexit Party",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 8
     },
     {
@@ -55649,7 +55655,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -55709,7 +55715,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 7
     },
     {
@@ -55769,7 +55775,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -55817,7 +55823,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 5
     },
     {
@@ -55949,7 +55955,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -55961,7 +55967,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Plaid Cymru",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -56273,7 +56279,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 3
     },
     {
@@ -56669,7 +56675,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 4
     },
     {
@@ -56789,7 +56795,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -56981,7 +56987,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 5
     },
     {
@@ -57137,7 +57143,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -57185,7 +57191,7 @@
       "country": "Scotland",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "snp",
+      "voteIntention": "green",
       "turnoutLikelihood": 4
     },
     {
@@ -57317,7 +57323,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 9
     },
     {
@@ -57341,7 +57347,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -57365,7 +57371,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -57437,7 +57443,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -57629,7 +57635,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -57653,7 +57659,7 @@
       "country": "Wales",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "plaid",
+      "voteIntention": "other",
       "turnoutLikelihood": 8
     },
     {
@@ -57737,7 +57743,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -57761,7 +57767,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 8
     },
     {
@@ -57833,7 +57839,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 3
     },
     {
@@ -57845,7 +57851,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -57857,7 +57863,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -57905,7 +57911,7 @@
       "country": "Wales",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -57965,7 +57971,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -58037,7 +58043,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "libdem",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 7
     },
     {
@@ -58121,7 +58127,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -58385,7 +58391,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 3
     },
     {
@@ -58421,7 +58427,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "labour",
+      "voteIntention": "conservative",
       "turnoutLikelihood": 9
     },
     {
@@ -58541,7 +58547,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -58625,7 +58631,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "green",
+      "voteIntention": "other",
       "turnoutLikelihood": 5
     },
     {
@@ -58637,7 +58643,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Liberal Democrat",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 8
     },
     {
@@ -58913,7 +58919,7 @@
       "country": "Scotland",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 4
     },
     {
@@ -58949,7 +58955,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Labour",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 7
     },
     {
@@ -59069,7 +59075,7 @@
       "country": "England",
       "education": "GCSE or equivalent",
       "vote2019": "Brexit Party",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -59105,7 +59111,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 2
     },
     {
@@ -59225,7 +59231,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Conservative",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 5
     },
     {
@@ -59333,7 +59339,7 @@
       "country": "England",
       "education": "Degree or above",
       "vote2019": "Did not vote",
-      "voteIntention": "libdem",
+      "voteIntention": "reform",
       "turnoutLikelihood": 5
     },
     {
@@ -59369,7 +59375,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Conservative",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 8
     },
     {
@@ -59837,7 +59843,7 @@
       "country": "England",
       "education": "No formal qualifications",
       "vote2019": "Did not vote",
-      "voteIntention": "other",
+      "voteIntention": "dontknow",
       "turnoutLikelihood": 6
     },
     {
@@ -59897,7 +59903,7 @@
       "country": "England",
       "education": "A-level or equivalent",
       "vote2019": "Did not vote",
-      "voteIntention": "reform",
+      "voteIntention": "green",
       "turnoutLikelihood": 6
     },
     {
