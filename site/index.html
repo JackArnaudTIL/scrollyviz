@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollyviz</title>
+    <style>
+      :root {
+        --paper: #fbfbf9;
+        --ink: #16202a;
+        --muted: #5a6b78;
+        --hair: #e4e7ea;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 34rem;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+      }
+      h1 {
+        margin: 0 0 2rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        border-top: 1px solid var(--hair);
+        padding: 1rem 0;
+      }
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
+      p {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Landing page for the GitHub Pages site. Add a <li> per app; the folder
+         name must match that app's `outDir` in its vite.config.js. -->
+    <main>
+      <h1>scrollyviz</h1>
+      <ul>
+        <li>
+          <a href="./scrollyviz-example/">Example</a>
+          <p>The reference scrollytelling example.</p>
+        </li>
+        <li>
+          <a href="./polling-sim/">Polling sim</a>
+          <p>Work in progress.</p>
+        </li>
+        <li>
+          <a href="./ai-basics/">AI basics</a>
+          <p>Work in progress — an introduction to AI concepts for new starters.</p>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

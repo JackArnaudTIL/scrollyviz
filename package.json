@@ -5,6 +5,11 @@
   "workspaces": [
     "scrollyviz-example",
     "polling-sim",
+    "ai-basics",
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present && node -e \"require('fs').cpSync('site', 'dist', { recursive: true })\"",
+    "preview": "npx vite preview --outDir dist --base /scrollyviz/"
+  }
 }

@@ -1,0 +1,92 @@
+/* Placeholder identity — deliberately different accent from the other apps
+   so they are never visually confused. Replace once the ai-basics design is
+   actually scoped. */
+:root {
+  --paper: #fbfbf9;
+  --ink: #16202a;
+  --muted: #5a6b78;
+  --hair: #e4e7ea;
+  --accent: #b4532a; /* placeholder burnt orange, distinct from the teal and violet apps */
+
+  --font-body: system-ui, sans-serif;
+  --measure: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.intro,
+.outro {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0 0 1.25rem;
+}
+
+.standfirst {
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 28rem;
+  margin: 0;
+}
+
+.outro {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.placeholder-label {
+  fill: var(--muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: var(--muted);
+  padding: 2rem;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

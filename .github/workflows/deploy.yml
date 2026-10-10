@@ -1,4 +1,5 @@
-# Builds the Vite app and publishes the compiled output to GitHub Pages.
+# Builds every app in the monorepo into one dist/ (landing page at the root,
+# each app in dist/<app-name>/) and publishes it as a single GitHub Pages site.
 # In your repo: Settings → Pages → Build and deployment → Source: "GitHub Actions".
 name: Deploy to GitHub Pages
 
@@ -34,8 +35,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build all apps + landing page
+        run: npm run build # root script: builds every workspace into dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

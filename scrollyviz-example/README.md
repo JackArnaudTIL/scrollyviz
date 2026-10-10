@@ -5,8 +5,8 @@ as a working baseline. A single chart stays pinned while narrative text
 scrolls past; each text block ("step") drives the chart to a new state
 ("scene"). Built with **Vite**, **D3**, and **Scrollama**.
 
-This app is one of two in this repo — see the root `README.md` for how it
-relates to `polling-sim/` and the shared `packages/scrolly-core/`.
+This app is one of several in this repo — see the root `README.md` for how it
+relates to the other apps and the shared `packages/scrolly-core/`.
 
 ## Quick start
 
@@ -14,14 +14,14 @@ From the repo root:
 
 ```bash
 npm install
-npm run dev --workspace scrollyviz-example   # http://localhost:5173
+npm run dev --workspace scrollyviz-example   # http://localhost:5173/scrollyviz/scrollyviz-example/
 ```
 
 Or from inside this folder: `npm run dev`. Edit any file under `src/` and the
 page reloads instantly.
 
 ```bash
-npm run build    # production build → dist/
+npm run build    # production build → ../dist/scrollyviz-example/
 npm run preview  # serve the built output locally
 ```
 
@@ -74,14 +74,10 @@ The sample data is illustrative placeholder — swap it before publishing.
 
 ## Deploying to GitHub Pages
 
-1. Push to a GitHub repo.
-2. Set **`base`** in `vite.config.js` to `'/<sub-path>/'` (it's
-   `'/scrollyviz-example/'` by default). For a `<user>.github.io` repo or a
-   custom domain, use `'/'` instead.
-3. In the repo: **Settings → Pages → Source → GitHub Actions**.
-4. Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and
-   publishes automatically; the live URL appears in the Actions run and under
-   Settings → Pages.
+This app is deployed together with the rest of the repo — see **Building and
+deploying** in the root `README.md`. It is served at
+`https://<user>.github.io/scrollyviz/scrollyviz-example/`; if that path ever
+changes, update `base` in `vite.config.js` to match.
 
 ## Accessibility
 

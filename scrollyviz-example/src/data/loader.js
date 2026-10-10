@@ -1,8 +1,8 @@
 import { json } from 'd3';
 
 // Loads the static dataset from /public. BASE_URL is injected by Vite and
-// resolves to '/scrolly-viz/' in production and '/' in dev, so the fetch works
-// in both places without hardcoding the repo path.
+// resolves to '/scrollyviz/scrollyviz-example/' (see vite.config.js), so the fetch works
+// in dev and production without hardcoding the path.
 export async function loadData() {
   const url = `${import.meta.env.BASE_URL}data/series.json`;
   const raw = await json(url);

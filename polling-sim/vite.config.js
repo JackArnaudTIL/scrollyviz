@@ -1,7 +1,11 @@
 import { defineConfig } from 'vite';
 
-// See scrollyviz-example/vite.config.js for the GitHub Pages base-path note —
-// same logic applies here once this app has its own deploy target.
+// See scrollyviz-example/vite.config.js for the GitHub Pages base-path and
+// shared-dist notes — same logic applies here.
 export default defineConfig({
-  base: '/polling-sim/',
+  base: '/scrollyviz/polling-sim/',
+  build: {
+    outDir: '../dist/polling-sim',
+    emptyOutDir: true,
+  },
 });
