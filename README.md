@@ -5,7 +5,7 @@ An npm-workspaces monorepo for scrollytelling data-viz pages.
 ```
 scrollyviz-example/   the reference example — small, working, deliberately unchanged
 polling-sim/           WIP — the next, more ambitious scroll (scaffold only so far)
-ai-basics/             WIP — basic AI concepts for new starters (draft outline, no chart yet)
+ai-explained/          WIP — basic AI concepts for new starters
 packages/scrolly-core/ chart-agnostic code shared by every app: Scrollama wiring,
                         motion helpers, and the sticky-layout CSS
 site/                  the landing page that links to every app on the deployed site
@@ -26,7 +26,7 @@ See each app's own README for details.
 npm install                                  # installs and links all workspaces
 npm run dev --workspace scrollyviz-example   # http://localhost:5173/scrollyviz/scrollyviz-example/
 npm run dev --workspace polling-sim
-npm run dev --workspace ai-basics
+npm run dev --workspace ai-explained
 ```
 
 ## Building and deploying

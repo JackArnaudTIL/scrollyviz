@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "note": "Prompts, token splits and probabilities are ILLUSTRATIVE — hand-written for teaching, not output from a real model. Scaling and compute figures are derived from published rules of thumb; see the source fields."
+  },
+  "prompts": {
+    "email": {
+      "brief": {
+        "request": "Draft a reply to Sam suggesting a timeline for handling the issues raised.",
+        "subject": "Q3 report",
+        "from": "Sam",
+        "email": "Hi,\n\nHere’s the Q3 report. The headline: a solid quarter overall, but with a few areas we need to get ahead of before year end.\n\n## Overall\n• Revenue £4.2m, up 8% on Q2 and 3% ahead of plan\n• Gross margin steady at 41%\n• Customer retention 94%, our best quarter this year\n\n## Regional highlights\n• North: our strongest region, up 14%, driven by two new enterprise contracts\n• South: up 6%, with the new partner channel now 20% of sales\n• Midlands: flat, but the Q4 pipeline looks healthier\n\n## Areas of concern\n• Scotland is down 9% after losing the Harper account; we need a recovery plan\n• Delivery costs rose 12%, mostly fuel and the new courier contract\n• Support response times slipped from 4 to 7 hours in September\n\n## Follow-up actions\n• Review the Scotland recovery plan before the board meeting\n• Agree a cap on delivery costs with procurement\n• Approve two temporary support hires for Q4\n\nCould you take a look and let me know what you think, ideally before Friday’s board meeting?\n\nThanks,\nSam",
+        "attachment": "Q3-report.pdf",
+        "label": "▤ your prompt + Sam’s email"
+      },
+      "tokens": ["Hi", " Sam", ",", "\n", "Thanks", " for", " the", " report", ".", " Could", " we", " have", " the", " Scotland", " recovery", " plan", " by"],
+      "next": [
+        [[" Friday", 0.46], [" Monday", 0.14], [" the", 0.1], [" end", 0.08], [" next", 0.06]],
+        [[",", 0.52], [".", 0.21], [" and", 0.11], [" so", 0.06], [" ahead", 0.04]],
+        [[" ahead", 0.31], [" so", 0.22], [" please", 0.12], [" if", 0.09], [" before", 0.08]],
+        [[" of", 0.93], [",", 0.03], [".", 0.02], [" so", 0.01]],
+        [[" the", 0.71], [" next", 0.08], [" our", 0.07], [" Thursday", 0.04], [" Monday", 0.03]],
+        [[" board", 0.62], [" meeting", 0.14], [" deadline", 0.07], [" weekend", 0.03]],
+        [[" meeting", 0.88], ["?", 0.04], [".", 0.03], [" review", 0.02]],
+        [["?", 0.64], [".", 0.24], [",", 0.05], [" on", 0.03]]
+      ],
+      "continuation": [" Friday", ",", " ahead", " of", " the", " board", " meeting", "?", " I", "'ll", " agree", " a", " delivery", " cost", " cap", " with", " procure", "ment", " by", " the", " end", " of", " October", ",", " and", " I", "'m", " happy", " to", " approve", " the", " two", " support", " hires", " for", " mid", "-", "Nov", "ember", ".", "\n", "Best", " wishes"],
+      "dataset": {
+        "positions": [1, 2, 4, 17]
+      },
+      "training": {
+        "target": " Friday",
+        "passes": [
+          [[" the", 0.04], [" report", 0.03], [" Sam", 0.03], [" plan", 0.02], [" Friday", 0.01]],
+          [[" Friday", 0.09], [" the", 0.08], [" Monday", 0.05], [" end", 0.03], [" report", 0.02]],
+          [[" Friday", 0.27], [" Monday", 0.12], [" the", 0.1], [" end", 0.07], [" next", 0.04]],
+          [[" Friday", 0.46], [" Monday", 0.14], [" the", 0.1], [" end", 0.08], [" next", 0.06]]
+        ]
+      },
+      "windowed": [
+        [[" Friday", 0.18], [" Monday", 0.16], [" the", 0.14], [" end", 0.11], [" next", 0.08]]
+      ]
+    },
+    "trap": {
+      "tokens": ["How", " many", " r", "'s", " are", " in", " \"", "str", "aw", "berry", "\"?", " There", " are"],
+      "next": [
+        [[" two", 0.52], [" three", 0.34], [" 2", 0.06], [" 3", 0.04]]
+      ],
+      "truth": " three",
+      "caveat": "A well-known trap for earlier models. Many current models now answer correctly — as models change, old traps disappear and new ones emerge."
+    }
+  },
+  "scaling": {
+    "source": "Parametric fit L(N, D) = E + A / N^alpha + B / D^beta from Hoffmann et al. (2022), 'Training Compute-Optimal Large Language Models' (Chinchilla), arXiv:2203.15556. Constants are the refit by Besiroglu et al. (2024), 'Chinchilla Scaling: A replication attempt' (Epoch AI), arXiv:2404.10102, which found the original rounded values (E=1.69, A=406.4, B=410.7, alpha=0.34, beta=0.28) do not fit the paper's own data well. Loss is in nats per token.",
+    "params": {
+      "E": 1.8172,
+      "A": 482.01,
+      "B": 2085.43,
+      "alpha": 0.3478,
+      "beta": 0.3658
+    },
+    "dataRange": [1000000000, 10000000000000],
+    "points": 60,
+    "models": {
+      "small": {
+        "label": "Smaller model (1 billion numbers)",
+        "N": 1000000000
+      },
+      "large": {
+        "label": "Larger model (70 billion numbers)",
+        "N": 70000000000
+      }
+    }
+  },
+  "compute": {
+    "source": "Standard approximations (Kaplan et al., 2020): training ≈ 6 × parameters × training tokens; generating ≈ 2 × parameters per token. Ignores hardware efficiency, attention overhead and long contexts.",
+    "model": {
+      "label": "Chinchilla-sized model",
+      "N": 70000000000,
+      "trainingTokens": 1400000000000
+    },
+    "flopsPerParamPerTrainingToken": 6,
+    "flopsPerParamPerGeneratedToken": 2,
+    "usageRates": {
+      "modest": {
+        "label": "1 billion tokens a day",
+        "tokensPerDay": 1000000000
+      },
+      "popular": {
+        "label": "100 billion tokens a day (a large public service)",
+        "tokensPerDay": 100000000000
+      }
+    }
+  },
+  "usage": {
+    "source": "Illustrative conversation. Words-per-token is the common rule of thumb for English text; exact counts depend on the model's tokenizer. Relative input/output pricing reflects typical published API price lists, which change often — no specific prices are shown.",
+    "wordsPerToken": "¾",
+    "conversation": {
+      "firstMessage": 120,
+      "followUp": 40,
+      "reply": 150,
+      "turns": 5
+    }
+  },
+  "embedding": {
+    "note": "Token IDs and numbers are illustrative. Real models give each token a list of thousands of numbers.",
+    "tokens": [" for", " mid", "-", "Nov", "ember", "."],
+    "ids": [329, 3735, 12, 2365, 1213, 13],
+    "vectors": [[0.12, -0.83, 0.47, 0.05, -0.31, 0.66], [-0.54, 0.21, 0.09, -0.77, 0.38, -0.12], [0.31, 0.07, -0.58, 0.22, 0.14, -0.4], [0.71, -0.26, 0.58, 0.14, -0.49, 0.33], [0.65, -0.31, 0.52, 0.19, -0.44, 0.29], [-0.18, 0.42, -0.07, 0.61, 0.27, -0.35]]
+  },
+  "meaning": {
+    "note": "Illustrative. Real embeddings have thousands of dimensions; this flattens them to two so they can be drawn.",
+    "focus": "Friday",
+    "groups": {
+      "days": "days of the week",
+      "months": "months",
+      "work": "work words",
+      "small": "small connecting words"
+    },
+    "points": [
+      {
+        "t": "Monday",
+        "g": "days",
+        "x": 0.16,
+        "y": 0.2
+      },
+      {
+        "t": "Tuesday",
+        "g": "days",
+        "x": 0.27,
+        "y": 0.12
+      },
+      {
+        "t": "Thursday",
+        "g": "days",
+        "x": 0.1,
+        "y": 0.31
+      },
+      {
+        "t": "Friday",
+        "g": "days",
+        "x": 0.27,
+        "y": 0.28
+      },
+      {
+        "t": "weekend",
+        "g": "days",
+        "x": 0.36,
+        "y": 0.38
+      },
+      {
+        "t": "September",
+        "g": "months",
+        "x": 0.7,
+        "y": 0.11
+      },
+      {
+        "t": "October",
+        "g": "months",
+        "x": 0.8,
+        "y": 0.19
+      },
+      {
+        "t": "November",
+        "g": "months",
+        "x": 0.73,
+        "y": 0.28
+      },
+      {
+        "t": "Nov",
+        "g": "months",
+        "x": 0.86,
+        "y": 0.31
+      },
+      {
+        "t": "report",
+        "g": "work",
+        "x": 0.6,
+        "y": 0.62
+      },
+      {
+        "t": "plan",
+        "g": "work",
+        "x": 0.75,
+        "y": 0.68
+      },
+      {
+        "t": "board",
+        "g": "work",
+        "x": 0.56,
+        "y": 0.76
+      },
+      {
+        "t": "meeting",
+        "g": "work",
+        "x": 0.7,
+        "y": 0.83
+      },
+      {
+        "t": "deadline",
+        "g": "work",
+        "x": 0.86,
+        "y": 0.75
+      },
+      {
+        "t": "the",
+        "g": "small",
+        "x": 0.14,
+        "y": 0.7
+      },
+      {
+        "t": "a",
+        "g": "small",
+        "x": 0.25,
+        "y": 0.78
+      },
+      {
+        "t": "of",
+        "g": "small",
+        "x": 0.12,
+        "y": 0.85
+      },
+      {
+        "t": "for",
+        "g": "small",
+        "x": 0.28,
+        "y": 0.9
+      }
+    ]
+  },
+  "trainingDemo": {
+    "request": "Draft a reply to Sam suggesting a timeline for handling the issues raised.",
+    "base": "Draft a reply to Jo suggesting a timeline for the budget review.\n\nDraft a reply to the team confirming the office move date.\n\nDraft a reply to Priya about the Q4 targets…",
+    "tuned": "Hi Sam,\nThanks for the report. Could we have the Scotland recovery plan by Friday, ahead of the board meeting? I'll agree a delivery cost cap with procurement by the end of October, and I'm happy to approve the two support hires for mid-November.\nBest wishes",
+    "preferred": "Hi Sam,\nThanks for the report. Could we have the Scotland recovery plan by Friday, ahead of the board meeting? I'll agree a delivery cost cap with procurement by the end of October, and I'm happy to approve the two support hires for mid-November.\nBest wishes",
+    "other": "Hi Sam,\nThanks for this. We’ll look into these issues and get back to you at some point.\nBest wishes"
+  },
+  "attention": {
+    "note": "Illustrative weights. Real models run many attention patterns in parallel, in every layer.",
+    "lines": [
+      {
+        "label": "SAM’S EMAIL (CONTEXT)",
+        "tokens": [
+          {
+            "t": "…"
+          },
+          {
+            "t": " ideally"
+          },
+          {
+            "t": " before",
+            "weight": 0.04
+          },
+          {
+            "t": " Friday",
+            "weight": 0.28
+          },
+          {
+            "t": "’s",
+            "weight": 0.03
+          },
+          {
+            "t": " board",
+            "weight": 0.1
+          },
+          {
+            "t": " meeting",
+            "weight": 0.08
+          },
+          {
+            "t": "?"
+          }
+        ]
+      },
+      {
+        "label": "YOUR PROMPT",
+        "tokens": [
+          {
+            "t": "…"
+          },
+          {
+            "t": " suggesting"
+          },
+          {
+            "t": " a"
+          },
+          {
+            "t": " timeline",
+            "weight": 0.07
+          },
+          {
+            "t": " for"
+          },
+          {
+            "t": " handling"
+          },
+          {
+            "t": " the"
+          },
+          {
+            "t": " issues",
+            "weight": 0.03
+          },
+          {
+            "t": " raised"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "label": "REPLY SO FAR",
+        "tokens": [
+          {
+            "t": "…"
+          },
+          {
+            "t": " Could"
+          },
+          {
+            "t": " we"
+          },
+          {
+            "t": " have"
+          },
+          {
+            "t": " the"
+          },
+          {
+            "t": " Scotland",
+            "weight": 0.09
+          },
+          {
+            "t": " recovery",
+            "weight": 0.04
+          },
+          {
+            "t": " plan",
+            "weight": 0.12
+          },
+          {
+            "t": " by",
+            "weight": 0.1
+          }
+        ]
+      }
+    ],
+    "prediction": [" Friday", 0.46]
+  },
+  "sampling": {
+    "note": "Illustrative. The long tail of other tokens is grouped into one row.",
+    "dist": [[" Friday", 0.46], [" Monday", 0.14], [" the", 0.1], [" end", 0.08], [" next", 0.06]],
+    "temperatures": [
+      {
+        "label": "low",
+        "t": 0.2
+      },
+      {
+        "label": "default",
+        "t": 1
+      },
+      {
+        "label": "high",
+        "t": 1.5
+      }
+    ],
+    "runs": [" Friday", " Friday", " Monday", " Friday", " the"]
+  }
+}

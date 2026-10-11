@@ -1,0 +1,1117 @@
+/* Placeholder identity — deliberately different accent from the other apps
+   so they are never visually confused. Replace once the ai-explained design is
+   actually scoped. */
+:root {
+  --paper: #fbfbf9;
+  --ink: #16202a;
+  --muted: #5a6b78;
+  --hair: #e4e7ea;
+  --accent: #b4532a; /* placeholder burnt orange, distinct from the teal and violet apps */
+  --accent-soft: #f3e1d8;
+  --model: #2f4858; /* model-related structure: grid, input tokens */
+  --model-soft: #dfe6eb;
+  --right: #2e7d4f;
+  --font-mono: ui-monospace, Consolas, 'Cascadia Mono', monospace;
+
+  --font-body: system-ui, sans-serif;
+  --measure: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.intro,
+.glossary,
+.outro {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* A full screen tall, so the first step and graphic stay out of view until the
+   reader scrolls. svh = the small viewport (mobile toolbars showing). */
+.intro {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0 0 1.25rem;
+}
+
+.standfirst {
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 28rem;
+  margin: 0;
+}
+
+/* ---- Key concepts list (after the story) ------------------------------------ */
+.glossary {
+  padding-top: 6rem;
+}
+
+.glossary h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+.glossary-intro {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.glossary dl {
+  margin: 0;
+  border-top: 1px solid var(--hair);
+}
+
+.glossary dt {
+  padding-top: 0.9rem;
+  font-weight: 700;
+}
+
+.glossary dd {
+  margin: 0.15rem 0 0;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--hair);
+}
+
+.outro {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.error {
+  color: var(--muted);
+  padding: 2rem;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Scroll stops ----------------------------------------------------------------
+   Gentle snapping: when the reader stops scrolling near a step, the page settles
+   with that step's text beside its graphic. 'proximity' (not 'mandatory') means
+   fast scrolling isn't interrupted and long steps can still be read through. */
+html {
+  scroll-snap-type: y proximity;
+}
+
+.intro {
+  scroll-snap-align: start;
+}
+
+.step-card {
+  scroll-snap-align: center;
+}
+
+/* Phones: the graphic is pinned at the top, so settle each card at the bottom
+   of the screen, below it. */
+@media (max-width: 720px) {
+  .step-card {
+    scroll-snap-align: end;
+    scroll-margin-bottom: 1.5rem;
+  }
+}
+
+/* Section break between groups of steps: a plain, larger heading with no card. */
+.step .section-break h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.step .section-break {
+  border: none;
+}
+
+/* Space between paragraphs when a step has more than one. */
+.step p + p,
+.step .step-list + p {
+  margin-top: 0.85rem;
+}
+
+/* Bulleted lists in step text (body lines starting with '•').
+   Indent: padding-left. Font: font-family / font-size. Bullet: li::marker. */
+.step-list {
+  max-width: 26rem;
+  margin: 0.85rem 0 0;
+  padding-left: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.step-list li + li {
+  margin-top: 0.4rem;
+}
+
+.step-list li::marker {
+  color: var(--accent);
+}
+
+/* ---- Key concepts: inline terms with a definition tooltip ------------------- */
+/* Marked in step text as {{key}}; definitions live in content/concepts.js. */
+.concept {
+  position: relative;
+  font-weight: 600;
+  text-decoration: underline dotted var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  cursor: help;
+}
+
+.concept:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.concept-tip {
+  position: absolute;
+  z-index: 10;
+  bottom: calc(100% + 10px);
+  left: 0;
+  transform: translateX(var(--tip-shift, 0px));
+  width: max-content;
+  max-width: min(18rem, 80vw);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  /* display:none (not just invisible) so hidden tips never widen the page. */
+  display: none;
+  pointer-events: none;
+}
+
+.concept:hover .concept-tip,
+.concept:focus .concept-tip {
+  display: block;
+}
+
+.concept-tip-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.7rem;
+  color: #a9b4bd;
+}
+
+/* ---- The graphic -------------------------------------------------------------
+   All SVG text inherits the body font; class rules below set size and colour. */
+svg text {
+  fill: var(--ink);
+  font-size: 13px;
+}
+
+.zone-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  fill: var(--muted);
+}
+
+.zone-note {
+  font-size: 11px;
+  font-style: italic;
+  fill: var(--muted);
+}
+
+.arrow {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.arrow-head {
+  fill: var(--muted);
+}
+
+/* Token chips */
+.chip-box {
+  fill: var(--paper);
+  stroke: var(--model);
+  stroke-width: 1;
+}
+
+.chip-text {
+  font-family: var(--font-mono);
+}
+
+.chip.target .chip-box {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.chip.target .chip-text,
+.example-target {
+  fill: var(--accent);
+  font-weight: 700;
+}
+
+/* Tokens the model wrote itself, fed back into the input. */
+.chip.generated .chip-text {
+  fill: var(--accent);
+}
+
+.chip.generated .chip-box {
+  stroke: var(--accent);
+  stroke-dasharray: 3 2;
+}
+
+/* A token outlined for a moment as it lands, so the unit being added shows
+   even in plain text. */
+.chip .chip-box.flash {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: none;
+}
+
+.flying {
+  fill: var(--accent);
+  font-weight: 700;
+}
+
+.window-frame {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+/* Output zone */
+.out-caption {
+  font-size: 12px;
+  fill: var(--muted);
+}
+
+.bar {
+  fill: var(--model-soft);
+}
+
+.bar-row.picked .bar {
+  fill: var(--accent);
+}
+
+.bar-label {
+  font-family: var(--font-mono);
+}
+
+.bar-row.picked .bar-label {
+  fill: var(--accent);
+  font-weight: 700;
+}
+
+.bar-row.target .bar {
+  fill: var(--right);
+}
+
+.bar-row.target .bar-label {
+  fill: var(--right);
+  font-weight: 700;
+}
+
+.readout {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.bar-pct {
+  font-size: 12px;
+  fill: var(--muted);
+}
+
+.flag-wrong {
+  fill: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flag-right {
+  fill: var(--right);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.caveat {
+  font-size: 11.5px;
+  fill: var(--muted);
+}
+
+/* Full-graphic charts */
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chart-sub {
+  fill: var(--muted);
+}
+
+.axis text {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.axis path,
+.axis line {
+  stroke: var(--hair);
+}
+
+.axis-label,
+.row-label {
+  font-size: 12px;
+  fill: var(--muted);
+}
+
+.curve {
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.curve-small .curve {
+  stroke: var(--muted);
+}
+
+.curve-large .curve {
+  stroke: var(--accent);
+}
+
+.curve-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.curve-large .curve-label {
+  fill: var(--accent);
+}
+
+.gain-dot {
+  fill: var(--paper);
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+
+.gain-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footnote {
+  font-size: 10.5px;
+  fill: var(--muted);
+}
+
+.compute-bar.training {
+  fill: var(--model);
+}
+
+.compute-bar.usage {
+  fill: var(--accent);
+}
+
+.bar-value {
+  fill: var(--paper);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.row-note {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--accent);
+}
+
+.training-line {
+  stroke: var(--model);
+  stroke-dasharray: 4 3;
+}
+
+.day-counter {
+  font-size: 30px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.fact {
+  font-size: 13px;
+}
+
+.tile {
+  fill: var(--model-soft);
+}
+
+.tile-output {
+  fill: var(--accent-soft);
+}
+
+.tile-title {
+  font-weight: 700;
+}
+
+.tile-text {
+  font-size: 12px;
+}
+
+.usage-in {
+  fill: var(--model);
+}
+
+.usage-out {
+  fill: var(--accent);
+}
+
+/* Summary */
+.summary-node rect {
+  fill: var(--paper);
+  stroke: var(--hair);
+  stroke-width: 1.5;
+  transition: fill 0.25s, stroke 0.25s;
+}
+
+.summary-node.active rect {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+}
+
+.node-title {
+  font-weight: 600;
+}
+
+.node-note {
+  font-size: 11.5px;
+  fill: var(--muted);
+}
+
+/* Labels that sit over the dashed training line get a paper-coloured halo. */
+.row-label,
+.row-note {
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* Model node map */
+.edge {
+  stroke: var(--model);
+}
+
+.node {
+  stroke: var(--model);
+  stroke-width: 1.5;
+}
+
+/* The task: a generic browser window with an email and an AI chat panel. */
+.win-frame {
+  fill: var(--paper);
+}
+
+.win-outline {
+  fill: none;
+  stroke: #d5dade;
+  stroke-width: 1.5;
+}
+
+.win-bar {
+  fill: #eef1f3;
+}
+
+.win-dot {
+  fill: #cfd5da;
+}
+
+.win-address {
+  fill: var(--paper);
+  stroke: var(--hair);
+}
+
+.win-url {
+  font-size: 10.5px;
+  fill: var(--muted);
+}
+
+.win-divider {
+  stroke: var(--hair);
+}
+
+.mail-subject {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.avatar {
+  fill: var(--model-soft);
+}
+
+.avatar-text {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--model);
+}
+
+.mail-from {
+  font-weight: 600;
+}
+
+.mail-meta {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.mail-body {
+  font-size: 11.5px;
+}
+
+.mail-heading {
+  font-weight: 700;
+}
+
+.scroll-track {
+  fill: var(--hair);
+}
+
+.scroll-thumb {
+  fill: #b3bcc4;
+}
+
+.attach {
+  fill: var(--paper);
+  stroke: var(--hair);
+  stroke-width: 1.5;
+}
+
+.attach-text {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.chat-bg {
+  fill: #f6f7f8;
+}
+
+.chat-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chat-who {
+  font-size: 10.5px;
+  fill: var(--muted);
+}
+
+.bubble-user {
+  fill: var(--accent-soft);
+}
+
+.bubble-text {
+  font-size: 12px;
+}
+
+.bubble-ai {
+  fill: var(--model-soft);
+}
+
+.typing-dot {
+  fill: var(--muted);
+}
+
+.chat-input {
+  fill: var(--paper);
+  stroke: var(--hair);
+}
+
+.chat-placeholder {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+/* The prompt collapsed into one block, ahead of the reply's tokens. */
+.chip.prefix .chip-box {
+  fill: var(--model-soft);
+  stroke: none;
+}
+
+.chip.prefix .chip-text {
+  fill: var(--model);
+  font-weight: 600;
+}
+
+/* "Text becomes tokens": text → tokens → token IDs → grid of numbers. */
+.embed-token {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.embed-chip {
+  fill: var(--paper);
+  stroke: var(--model);
+  stroke-width: 1;
+}
+
+.embed-id {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  fill: var(--accent);
+  font-weight: 600;
+}
+
+.embed-dim {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.embed-value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+/* "What the Numbers Mean": embeddings as a map of meaning. */
+.map-frame {
+  fill: none;
+  stroke: var(--hair);
+  stroke-width: 1.5;
+}
+
+.map-point circle {
+  fill: var(--model);
+}
+
+.map-point text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.map-point.focus circle {
+  fill: var(--accent);
+}
+
+.map-point.focus text {
+  fill: var(--accent);
+  font-weight: 700;
+}
+
+.map-group {
+  font-size: 12px;
+  font-style: italic;
+  fill: var(--muted);
+}
+
+/* Training section: stages pipeline, side-by-side demos, timeline. */
+.stage rect {
+  stroke-width: 1.5;
+}
+
+.stage-thing rect {
+  fill: var(--model-soft);
+  stroke: none;
+}
+
+.stage-process rect {
+  fill: var(--paper);
+  stroke: var(--accent);
+}
+
+.stage-title {
+  font-weight: 700;
+}
+
+.stage-process .stage-title {
+  fill: var(--accent);
+}
+
+.stage-note {
+  font-size: 12px;
+  fill: var(--muted);
+}
+
+.demo-request {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.demo-title {
+  font-weight: 700;
+}
+
+.demo-sub {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.demo-panel {
+  fill: var(--paper);
+  stroke: var(--hair);
+  stroke-width: 1.5;
+}
+
+.demo-panel.preferred {
+  stroke: var(--right);
+  stroke-width: 2;
+}
+
+.demo-text {
+  font-size: 12px;
+}
+
+.time-axis {
+  stroke: var(--hair);
+  stroke-width: 2;
+}
+
+.time-data {
+  fill: var(--model-soft);
+}
+
+.time-train {
+  fill: var(--accent-soft);
+}
+
+.time-frozen {
+  fill: none;
+  stroke: var(--model);
+  stroke-dasharray: 4 3;
+}
+
+.time-label {
+  font-size: 12px;
+  fill: var(--model);
+}
+
+.time-marker {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.time-marker-label {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.time-chat {
+  fill: var(--accent);
+}
+
+.card-sees {
+  stroke: var(--accent);
+}
+
+/* "Paying Attention" and "Choosing a Token". */
+.attn-token {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.attn-token.attended {
+  font-weight: 700;
+}
+
+.attn-shade {
+  fill: var(--accent-soft);
+}
+
+.attn-arc {
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+}
+
+.attn-slot {
+  fill: var(--paper);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2;
+}
+
+.attn-slot-text {
+  fill: var(--accent);
+  font-weight: 700;
+}
+
+.attn-bar {
+  fill: var(--accent);
+}
+
+.dial-track {
+  stroke: var(--hair);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.dial-stop {
+  fill: var(--muted);
+}
+
+.dial-knob {
+  fill: var(--accent);
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
+.run-pick {
+  font-weight: 700;
+  fill: var(--accent);
+}
+
+.run-pick.different {
+  fill: var(--model);
+}
+
+/* ---- Progress tracker and section navigation (src/nav.js) ------------------
+   Wide screens: a rail of dots on the right edge; hover or focus opens it to
+   show titles. Narrow screens: a top progress bar and a "Contents" panel. */
+.progress-nav {
+  position: fixed;
+  z-index: 30;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.75rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.progress-nav ol {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.progress-nav button,
+.nav-title,
+.nav-glossary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 2px 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  font-size: 0.78rem;
+  transition: max-width 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid var(--muted);
+  border-radius: 50%;
+  background: var(--paper);
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.nav-dot-square {
+  border-radius: 2px;
+}
+
+.done .nav-dot {
+  background: var(--model);
+  border-color: var(--model);
+}
+
+.active .nav-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.4);
+}
+
+.progress-nav .active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav-section {
+  margin-top: 0.6rem;
+}
+
+.nav-section .nav-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.nav-tick {
+  flex: none;
+  width: 13px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.nav-glossary {
+  margin-top: 0.8rem;
+}
+
+.nav-title {
+  margin-bottom: 0.6rem;
+}
+
+.nav-title .nav-label {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* The progress line runs behind the dots. */
+.nav-track {
+  position: absolute;
+  top: 0.9rem;
+  bottom: 2.6rem;
+  right: calc(0.6rem + 4px);
+  width: 2px;
+  background: var(--hair);
+}
+
+.nav-fill {
+  width: 100%;
+  height: 0;
+  background: var(--accent);
+  transition: height 0.4s ease;
+}
+
+/* Open: on hover or keyboard focus, show every title. */
+.progress-nav:hover,
+.progress-nav:focus-within {
+  background: var(--paper);
+  border-color: var(--hair);
+  box-shadow: 0 6px 24px rgba(22, 32, 42, 0.12);
+}
+
+.progress-nav:hover .nav-label,
+.progress-nav:focus-within .nav-label {
+  max-width: 18rem;
+  opacity: 1;
+}
+
+.progress-nav button:hover .nav-label,
+.nav-title:hover .nav-label,
+.nav-glossary:hover .nav-label {
+  color: var(--accent);
+}
+
+.progress-bar,
+.nav-toggle {
+  display: none;
+}
+
+/* Narrow screens: the rail becomes a panel opened by the Contents button. */
+@media (max-width: 720px) {
+  .progress-nav {
+    display: none;
+    top: auto;
+    bottom: 4.25rem;
+    right: 1rem;
+    transform: none;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--paper);
+    border-color: var(--hair);
+    box-shadow: 0 6px 24px rgba(22, 32, 42, 0.16);
+  }
+
+  .progress-nav.open {
+    display: block;
+  }
+
+  .progress-nav .nav-label {
+    max-width: 18rem;
+    opacity: 1;
+  }
+
+  .nav-track {
+    display: none;
+  }
+
+  .progress-bar {
+    display: block;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--hair);
+  }
+
+  .progress-bar-fill {
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.4s ease;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: fixed;
+    z-index: 31;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--hair);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 14px rgba(22, 32, 42, 0.12);
+    cursor: pointer;
+  }
+}

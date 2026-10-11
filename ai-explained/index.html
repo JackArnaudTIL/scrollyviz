@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI explained (WIP)</title>
+  </head>
+  <body>
+    <header class="intro">
+      <p class="eyebrow">WIP — draft outline</p>
+      <h1>The AI Guide</h1>
+      <p class="standfirst">
+        How AI models work, how they are trained, and
+        core concepts that will shape their future.
+      </p>
+    </header>
+
+    <main class="scrolly">
+      <figure class="graphic" id="graphic" aria-label="Placeholder chart"></figure>
+      <div class="steps" id="steps"></div>
+    </main>
+
+    <!-- Filled from src/content/concepts.js by main.js. -->
+    <section class="glossary" id="key-concepts" aria-labelledby="key-concepts-title">
+      <h2 id="key-concepts-title">Key concepts</h2>
+      <p class="glossary-intro">The terms used throughout this page, in one place.</p>
+      <dl id="glossary-list"></dl>
+    </section>
+
+    <footer class="outro">
+      <p>
+        Example prompts, token splits and probabilities are illustrative, written
+        for teaching rather than taken from a real model.
+      </p>
+      <p>
+        Scaling curves: the Chinchilla fit (Hoffmann et al., 2022, arXiv:2203.15556)
+        with constants refit by Epoch AI (Besiroglu et al., 2024, arXiv:2404.10102).
+        Compute estimates: the standard rules of thumb of ≈ 6 × parameters × training
+        tokens to train and ≈ 2 × parameters per token generated (Kaplan et al., 2020).
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

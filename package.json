@@ -5,7 +5,7 @@
   "workspaces": [
     "scrollyviz-example",
     "polling-sim",
-    "ai-basics",
+    "ai-explained",
     "packages/*"
   ],
   "scripts": {
